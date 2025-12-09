@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sistema de Registro e Inicio de Sesión</title>
+  <link rel="stylesheet" href="css\style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Crear Cuenta</h2>
+    <form id="registerForm">
+      <input type="text" id="nombre" placeholder="Nombre completo" required>
+      <input type="email" id="correo" placeholder="Correo electrónico" required>
+      <input type="text" id="celular" placeholder="Número de celular (Bolivia)" required>
+      <input type="password" id="contraseña" placeholder="Contraseña" required>
+      <div class="pass-buttons">
+        <button type="button" id="toggleRegistro">Ver</button>
+      </div>
+      <button type="submit">Registrarse</button>
+      <p id="mensajeRegistro"></p>
+    </form>
+
+    <h2>Iniciar Sesión</h2>
+    <form id="loginForm">
+      <input type="email" id="loginCorreo" placeholder="Correo registrado" required>
+      <input type="password" id="loginPass" placeholder="Contraseña" required>
+      <div class="pass-buttons">
+        <button type="button" id="toggleLogin">Ver</button>
+      </div>
+      <button type="submit">Entrar</button>
+      <p id="mensajeLogin"></p>
+      <a href="#" id="recuperarLink" style="display:none;">¿Olvidaste tu contraseña?</a>
+    </form>
+
+    <div id="recuperarSeccion" style="display:none;">
+      <h2>Recuperar Contraseña</h2>
+      <input type="email" id="recuperarCorreo" placeholder="Ingresa tu correo" required>
+      <input type="password" id="nuevaPass" placeholder="Nueva contraseña" required>
+      <div class="pass-buttons">
+        <button type="button" id="toggleNueva">Ver</button>
+      </div>
+      <button id="actualizarPass">Actualizar contraseña</button>
+      <p id="mensajeRecuperar"></p>
+    </div>
+  </div>
+  <script src="javascript.js"></script>
+</body>
+</html>
